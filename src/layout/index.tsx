@@ -47,7 +47,7 @@ export const Layout = ({ children }: LayoutProps) => {
     >
       <GridItem pl="2" area={"header"} borderBottom={"1px"} pt={"20px"}>
         <Flex direction={"row"} align={"center"} justify={"space-evenly"}>
-          <Link href="http://localhost:3000/home" isExternal mb="10px">
+          <Link onClick={() => redirect("/home")} mb="10px">
             <Image src={logoIcon} alt={"logoIcon"} h={"60px"} w={"180px"} />
           </Link>
 
