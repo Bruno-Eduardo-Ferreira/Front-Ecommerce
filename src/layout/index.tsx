@@ -57,7 +57,9 @@ export const Layout = ({ children }: LayoutProps) => {
                 Produtos
               </MenuButton>
               <MenuList>
-                <MenuItem>Verificar um produto</MenuItem>
+                <MenuItem onClick={() => redirect("/verifyProduct")}>
+                  Verificar um produto
+                </MenuItem>
                 <MenuItem>Verificar todos os produtos</MenuItem>
                 <MenuItem>Adicionar produto</MenuItem>
                 <MenuItem>Alterar produto</MenuItem>
@@ -96,7 +98,9 @@ export const Layout = ({ children }: LayoutProps) => {
                 Minha conta
               </MenuButton>
               <MenuList>
-                <MenuItem>Verificar meus dados</MenuItem>
+                <MenuItem onClick={() => redirect("/myAccount")}>
+                  Verificar meus dados
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -114,7 +118,7 @@ export const Layout = ({ children }: LayoutProps) => {
             <Link mb="10px" onClick={() => redirect("/about")}>
               Quem somos
             </Link>
-            <Link onClick={() => redirect("/privacypolicy")}>
+            <Link onClick={() => redirect("/privacyPolicy")}>
               Politica de privacidade
             </Link>
           </Flex>
