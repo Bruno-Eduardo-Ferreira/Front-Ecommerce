@@ -5,6 +5,7 @@ import twitterIcon from "./twitter_icon.svg";
 import pagseguroIcon from "./pagseguro_icon.png";
 import securityPaymentIcon from "./Security_payment.png";
 import logoIcon from "./Utfpr.gif";
+import ecommerce from "./Ecommerce.png"
 
 export {
   facebookIcon,
@@ -14,4 +15,5 @@ export {
   pagseguroIcon,
   securityPaymentIcon,
   logoIcon,
+  ecommerce
 };
