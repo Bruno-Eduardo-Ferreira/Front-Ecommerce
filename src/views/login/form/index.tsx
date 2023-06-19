@@ -9,6 +9,7 @@ import {
 import { LoginFormInputs, schema } from "./schemaForm";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useRouter } from "next/router";
 
 export function FormLogin() {
   const {
@@ -19,7 +20,13 @@ export function FormLogin() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (values: LoginFormInputs) => console.log(values.login);
+  const router = useRouter();
+
+  const redirect = (path: string) => {
+    router.push(path);
+  };
+
+  const onSubmit = (values: LoginFormInputs) => redirect("/home");
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

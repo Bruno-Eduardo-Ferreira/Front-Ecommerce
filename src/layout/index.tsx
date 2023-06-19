@@ -34,6 +34,7 @@ export const Layout = ({ children }: LayoutProps) => {
   const redirect = (path: string) => {
     router.push(path);
   };
+  
   return (
     <Grid
       templateAreas={`"header header"
