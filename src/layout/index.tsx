@@ -62,7 +62,9 @@ export const Layout = ({ children }: LayoutProps) => {
                 <MenuItem onClick={() => redirect("/verifyProduct")}>
                   Verificar um produto
                 </MenuItem>
-                <MenuItem>Adicionar produto</MenuItem>
+                <MenuItem onClick={() => redirect("/editProduct")}>
+                  Adicionar produto
+                </MenuItem>
                 <MenuItem>Alterar produto</MenuItem>
                 <MenuItem>Remover produto</MenuItem>
               </MenuList>
