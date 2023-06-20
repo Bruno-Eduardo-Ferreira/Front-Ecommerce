@@ -74,7 +74,7 @@ export const Layout = ({ children }: LayoutProps) => {
                 Carrinho
               </MenuButton>
               <MenuList>
-                <MenuItem>Verificar um carrinho</MenuItem>
+                <MenuItem onClick={() => redirect("/verifyCarrinho")}>Verificar um carrinho</MenuItem>
                 <MenuItem>Verificar todos os carrinhos</MenuItem>
                 <MenuItem>Adicionar carrinho</MenuItem>
                 <MenuItem>Alterar carrinho</MenuItem>
