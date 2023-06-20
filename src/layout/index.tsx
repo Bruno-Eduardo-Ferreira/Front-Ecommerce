@@ -68,7 +68,6 @@ export const Layout = ({ children }: LayoutProps) => {
                 <MenuItem onClick={() => redirect("/editProduct")}>
                   Alterar produto
                 </MenuItem>
-                <MenuItem>Remover produto</MenuItem>
               </MenuList>
             </Menu>
 
@@ -81,9 +80,7 @@ export const Layout = ({ children }: LayoutProps) => {
                   Verificar um carrinho
                 </MenuItem>
                 <MenuItem>Verificar todos os carrinhos</MenuItem>
-                <MenuItem>Adicionar carrinho</MenuItem>
                 <MenuItem>Alterar carrinho</MenuItem>
-                <MenuItem>Remover carrinho</MenuItem>
               </MenuList>
             </Menu>
 
@@ -94,9 +91,7 @@ export const Layout = ({ children }: LayoutProps) => {
               <MenuList>
                 <MenuItem>Verificar um pedido</MenuItem>
                 <MenuItem>Verificar todos os pedidos</MenuItem>
-                <MenuItem>Adicionar pedido</MenuItem>
                 <MenuItem>Alterar pedido</MenuItem>
-                <MenuItem>Remover pedido</MenuItem>
               </MenuList>
             </Menu>
 
