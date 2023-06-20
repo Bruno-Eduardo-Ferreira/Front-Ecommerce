@@ -1,6 +1,6 @@
 import * as yup from "yup";
 
-export type EditProductFormInputs = {
+export type AddProductFormInputs = {
   nameProduct: string;
   valueProduct: string;
   descriptionProduct: string;

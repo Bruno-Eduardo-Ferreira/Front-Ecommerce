@@ -9,23 +9,25 @@ import {
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { EditProductFormInputs, schema } from "./schemaForm";
-import { editProductAPI } from "../callEditProduct";
+import { AddProductFormInputs, schema } from "./schemaForm";
+import { addProductAPI } from "../callAddProduct";
 import { useState } from "react";
 
-export function FormEditProduct() {
+export function FormAddProduct() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm<EditProductFormInputs>({
+  } = useForm<AddProductFormInputs>({
     resolver: yupResolver(schema),
   });
 
   const [error, setError] = useState<boolean>(false);
 
-  const onSubmit = (values: EditProductFormInputs) => {
-    editProductAPI(
+  const onSubmit = (values: AddProductFormInputs) => {
+    addProductAPI(
+      reset,
       setError,
       values.nameProduct,
       parseFloat(values.valueProduct),

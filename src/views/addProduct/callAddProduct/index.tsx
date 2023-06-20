@@ -1,5 +1,7 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { Dispatch, SetStateAction } from "react";
+import { AddProductFormInputs } from "../form/schemaForm";
+import { UseFormReset } from "react-hook-form";
 
 export type Product = {
   name: string;
@@ -7,7 +9,8 @@ export type Product = {
   description: string;
 };
 
-export async function editProductAPI(
+export async function addProductAPI(
+  reset: UseFormReset<AddProductFormInputs>,
   setError: Dispatch<SetStateAction<boolean>>,
   nameProduct: string,
   valueProduct: number,
@@ -27,6 +30,7 @@ export async function editProductAPI(
     await axios.post("http://localhost:8080/produto", data, { headers });
 
     setError(false);
+    reset();
   } catch (error) {
     setError(true);
     console.error(error);

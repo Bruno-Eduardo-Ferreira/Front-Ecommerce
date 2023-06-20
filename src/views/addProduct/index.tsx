@@ -1,8 +1,8 @@
 import { Layout } from "@/layout";
 import { Flex, Text } from "@chakra-ui/react";
-import { FormEditProduct } from "./form";
+import { FormAddProduct } from "./form";
 
-export function EditProduct() {
+export function AddProduct() {
   return (
     <Layout>
       <Flex direction={"row"} justify={"center"}>
@@ -11,7 +11,7 @@ export function EditProduct() {
             Editar um produto
           </Text>
           <Flex border={"1px"} p={"35px"} direction={"column"} w={"500px"}>
-            <FormEditProduct />
+            <FormAddProduct />
           </Flex>
         </Flex>
       </Flex>
