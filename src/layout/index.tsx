@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, Icon } from "@chakra-ui/icons";
 import { Image } from "@chakra-ui/next-js";
 import { useRouter } from "next/router";
 import {
@@ -18,6 +18,7 @@ import {
   instagramIcon,
   logoIcon,
   pagseguroIcon,
+  personIcon,
   securityPaymentIcon,
   twitterIcon,
   wppIcon,
@@ -34,7 +35,7 @@ export const Layout = ({ children }: LayoutProps) => {
   const redirect = (path: string) => {
     router.push(path);
   };
-  
+
   return (
     <Grid
       templateAreas={`"header header"
@@ -105,8 +106,18 @@ export const Layout = ({ children }: LayoutProps) => {
               </MenuList>
             </Menu>
           </Flex>
+          <Flex direction={"row"}>
+            <Image
+              src={personIcon}
+              alt={"personIcon"}
+              h={"25px"}
+              w={"25px"}
+              mr={"10px"}
+            />
+            <Text>{localStorage.getItem("user-name")}</Text>
+          </Flex>
         </Flex>
-      </GridItem>
+      </GridItem> 
 
       <GridItem pl="2" area={"main"} overflowY="auto">
         {children}

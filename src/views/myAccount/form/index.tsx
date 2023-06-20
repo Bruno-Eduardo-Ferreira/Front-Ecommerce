@@ -4,20 +4,24 @@ import { useForm } from "react-hook-form";
 export function FormMyAccount() {
   const {} = useForm();
 
+  var id = localStorage.getItem("user-id") ?? "";
+  var name = localStorage.getItem("user-name") ?? "";
+  var email = localStorage.getItem("user-email") ?? "";
+
   return (
     <form>
-      <FormLabel htmlFor="name">Nome</FormLabel>
-      <Input id="name" isReadOnly={true} />
+      <FormLabel htmlFor="id">ID</FormLabel>
+      <Input id="id" value={id} isReadOnly={true} />
 
-      <FormLabel htmlFor="login" pt={"15px"}>
+      <FormLabel htmlFor="name" pt={"15px"}>
+        Nome
+      </FormLabel>
+      <Input id="name" value={name} isReadOnly={true} />
+
+      <FormLabel htmlFor="email" pt={"15px"}>
         E-mail
       </FormLabel>
-      <Input id="login" isReadOnly={true} />
-
-      <FormLabel htmlFor="password" pt={"15px"}>
-        Senha
-      </FormLabel>
-      <Input id="password" isReadOnly={true} />
+      <Input id="email" value={email} isReadOnly={true} />
     </form>
   );
 }

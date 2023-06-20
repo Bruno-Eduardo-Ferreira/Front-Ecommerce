@@ -13,5 +13,5 @@ export const schema = yup.object().shape({
   password: yup
     .string()
     .required("Insira uma senha")
-    .min(6, "Mínimo de 6 caracteres"),
+    .min(4, "Mínimo de 4 caracteres"),
 });
