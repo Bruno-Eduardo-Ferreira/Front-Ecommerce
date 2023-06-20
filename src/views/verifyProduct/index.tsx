@@ -6,7 +6,7 @@ export function VerifyProduct() {
   return (
     <Layout>
       <Flex direction={"row"} justify={"center"}>
-        <Flex direction={"column"} align={"center"} mb={"25px"}>
+        <Flex direction={"column"} align={"center"} mb={"100px"}>
           <Text align={"center"} pb={"25px"} mt={"25px"}>
             Verificar um produto
           </Text>

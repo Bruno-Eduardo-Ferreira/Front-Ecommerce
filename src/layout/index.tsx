@@ -62,7 +62,6 @@ export const Layout = ({ children }: LayoutProps) => {
                 <MenuItem onClick={() => redirect("/verifyProduct")}>
                   Verificar um produto
                 </MenuItem>
-                <MenuItem>Verificar todos os produtos</MenuItem>
                 <MenuItem>Adicionar produto</MenuItem>
                 <MenuItem>Alterar produto</MenuItem>
                 <MenuItem>Remover produto</MenuItem>
@@ -74,7 +73,9 @@ export const Layout = ({ children }: LayoutProps) => {
                 Carrinho
               </MenuButton>
               <MenuList>
-                <MenuItem onClick={() => redirect("/verifyCarrinho")}>Verificar um carrinho</MenuItem>
+                <MenuItem onClick={() => redirect("/verifyCarrinho")}>
+                  Verificar um carrinho
+                </MenuItem>
                 <MenuItem>Verificar todos os carrinhos</MenuItem>
                 <MenuItem>Adicionar carrinho</MenuItem>
                 <MenuItem>Alterar carrinho</MenuItem>
@@ -117,7 +118,7 @@ export const Layout = ({ children }: LayoutProps) => {
             <Text>{localStorage.getItem("user-name")}</Text>
           </Flex>
         </Flex>
-      </GridItem> 
+      </GridItem>
 
       <GridItem pl="2" area={"main"} overflowY="auto">
         {children}
